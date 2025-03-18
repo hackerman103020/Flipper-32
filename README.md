@@ -9,7 +9,7 @@ Flipper-32 supports the following IR protocols:
 - **SIRC, SIRC15, SIRC20**
 - **Kaseikyo**
 
-**Note:** RCA and Pioneer protocols and RAW data are *not* supported. RAW data support will be added soon
+**Note:** RCA and Pioneer protocols are *not* supported. RAW data support will be added soon.
 
 ---
 
@@ -29,7 +29,7 @@ To set up and upload the code to your ESP32, you will need:
 1. **Download Files**
    - Download `ir-parsed-testing.ino` and `PinDefinitionsAndMore.h`.
    - Open `Arduino IDE`, create a new project, and copy the code into it.
-   - Alternatively, open `ir-parsed-testing.ino` add a new tab in Arduino IDE, and copy-paste `PinDefinitionsAndMore.h` make sure the file name is the same.
+   - Alternatively, open `ir-parsed-testing.ino`, add a new tab in Arduino IDE, and copy-paste `PinDefinitionsAndMore.h`. Make sure the filename matches.
 
 2. **Connect ESP32**
    - Plug in your ESP32 to your computer via USB.
@@ -45,14 +45,12 @@ To set up and upload the code to your ESP32, you will need:
 - **4-pin 64x128 OLED Display**
 - **MicroSD card to SD card adapter**
 - **4 buttons**
+- **IR LED**
 - **Breadboard / Solder-board and wires**
 
 ---
 
 ## Wiring Guide
-![ESP32-Pinout-1 jpg](https://github.com/user-attachments/assets/e2c73237-0115-4953-a1ab-7c7591e144ea)
-
-
 ### **SD Card to ESP32 Wiring**
 | SD Card Pin | ESP32 GPIO Pin |
 |------------|----------|
@@ -75,31 +73,38 @@ To set up and upload the code to your ESP32, you will need:
 | SCL     | 22       |
 
 ### **Button Wiring**
-- Wire the VCC(+)  in the image to the pins, and the GND(-) to gnd
 - Ensure each button is connected so that **ground and the pin are not connected unless the button is pressed**.
 
 | Button | ESP32 GPIO Pin | Purpose |
 |--------|----------|-----| 
-| Button 1 | 12 |  Plus   |
-| Button 2 | 14 |  Minus  |
-| Button 3 | 27 |  Equal  |
-| Button 4 | 26 |  Back   |
+| Button 1 | 12 | Plus   |
+| Button 2 | 14 | Minus  |
+| Button 3 | 27 | Equal  |
+| Button 4 | 26 | Back   |
 
 ![Button Wiring](https://github.com/user-attachments/assets/7a499785-861d-4e20-a064-888535d4156e)
 
----
-# Final 
-  - I added a battery to mine, and connected the usb port of it to the esp 32 with a switch! 
-![Pic of thing](https://github.com/user-attachments/assets/a5d47e33-c7c8-4f8e-8083-07ea85bd02af)
+### **IR LED Wiring**
+- **GPIO 4** to **+** of IR LED.
+- **GND** to **-** of IR LED.
 
+---
+
+## Additional Modifications
+- Added a **battery** to power the ESP32 via USB with a **switch** for easy control.
+
+![Device Setup](https://github.com/user-attachments/assets/a5d47e33-c7c8-4f8e-8083-07ea85bd02af)
+
+---
 
 ## Notes
 - Ensure all connections are **secure** and **correct** before powering on the device.
 - Double-check that all required **libraries** are installed in Arduino IDE.
 - If you encounter issues, check the **Serial Monitor** for debugging information.
-- Bluetooth usability will come soon! 
+- Bluetooth functionality will be added soon!
+
 
 ---
 
+Happy hacking! 🚀
 
-Happy **ethical** hacking! 🚀
