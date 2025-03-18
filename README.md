@@ -91,7 +91,7 @@ To set up and upload the code to your ESP32, you will need:
 ---
 
 ## Additional Modifications
-- Added a **battery** to power the ESP32 via USB with a **switch** for easy control.
+- Added a **battery** to power the ESP32 via VIN and GND with a **switch** for easy control.
 
 ![Device Setup](https://github.com/user-attachments/assets/a5d47e33-c7c8-4f8e-8083-07ea85bd02af)
 
