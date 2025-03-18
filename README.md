@@ -22,7 +22,4 @@ then plug in your esp-32 and upload the code!
 
 
  # how to wire
- | IR-Receiver connection | Serial LCD connection |
-|--help-|---|
-
- (https://github.com/ArminJo/Arduino-OpenWindowAlarm/blob/master/pictures/instructables-logo-v2.png)
+(https://microchip.my.site.com/servlet/rtaImage?eid=ka13l000000lwLi&feoid=00N3l00000QDoF6&refid=0EM3l000005tGhA)
