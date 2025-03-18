@@ -50,8 +50,8 @@ To set up and upload the code to your ESP32, you will need:
 ---
 
 ## Wiring Guide
-![Esp-32 Pinout](https://github.com/user-attachments/assets/031fd5fd-37ea-441d-bc28-e78218f9ea98)
-![ESP32-pinout-diagram](https://github.com/user-attachments/assets/e8faec2a-7389-4fe7-8380-b301e47b9ae8)
+![ESP32-Pinout-1 jpg](https://github.com/user-attachments/assets/e2c73237-0115-4953-a1ab-7c7591e144ea)
+
 
 ### **SD Card to ESP32 Wiring**
 | SD Card Pin | ESP32 Pin |
