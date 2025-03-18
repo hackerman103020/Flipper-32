@@ -1,33 +1,96 @@
 # Flipper-32
-A flipper-zero like device, based on a ESP-32
-# Protocols
-it supports NEC, NECext, NEC42, NEC42ext, Samsung32, RC6, RC5, RC5X, SIRC, SIRC15, SIRC20, Kaseikyo, 
-it does not support RCA or pioneer 
+A Flipper Zero-like device based on an ESP32.
+
+## Supported Protocols
+Flipper-32 supports the following IR protocols:
+- **NEC, NECext, NEC42, NEC42ext**
+- **Samsung32**
+- **RC6, RC5, RC5X**
+- **SIRC, SIRC15, SIRC20**
+- **Kaseikyo**
+
+**Note:** RCA and Pioneer protocols are *not* supported.
+
+---
+
+## Setup Guide
+### Requirements
+To set up and upload the code to your ESP32, you will need:
+- **Arduino IDE** (latest version recommended)
+- **ESP32 board**
+- **Required Libraries** (Install via Arduino Library Manager):
+  - [Adafruit GFX Library (1.11.11)](https://github.com/adafruit/Adafruit-GFX-Library)
+  - [Adafruit SSD1306 (2.5.13)](https://github.com/adafruit/Adafruit_SSD1306)
+  - [SD Library (1.3.0)](https://www.arduino.cc/en/Reference/SD)
+  - [ezButton (1.0.6)](https://github.com/ArduinoGetStarted/ezButton)
+  - [IRMP (3.6.4)](https://github.com/ukw100/IRMP)
+
+### Installation Steps
+1. **Download Files**
+   - Download `ir-parsed-testing.ino` and `PinDefinitionsAndMore.h`.
+   - Open `Arduino IDE`, create a new project, and copy the code into it.
+   - Alternatively, add a new tab in Arduino IDE and copy-paste `PinDefinitionsAndMore.h`.
+
+2. **Connect ESP32**
+   - Plug in your ESP32 to your computer via USB.
+   - Select the correct **board** and **port** in Arduino IDE.
+
+3. **Upload Code**
+   - Click **Upload** and wait for the process to complete.
+
+---
+
+## Required Components
+- **ESP32** microcontroller
+- **4-pin 64x128 OLED Display**
+- **MicroSD card to SD card adapter**
+- **4 buttons**
+- **Breadboard / Solder-board and wires**
+
+---
+
+## Wiring Guide
+### **SD Card to ESP32 Wiring**
+| SD Card Pin | ESP32 Pin |
+|------------|----------|
+| 1          | 5        |
+| 2          | 23       |
+| 3          | GND      |
+| 4          | 3.3V     |
+| 5          | 18       |
+| 6          | GND      |
+| 7          | 19       |
+
+![SD Card Wiring](https://github.com/user-attachments/assets/cc19777b-53b5-4adb-aee7-3fdfbca30b4f)
+
+### **OLED Screen to ESP32 Wiring**
+| OLED Pin | ESP32 Pin |
+|---------|----------|
+| VCC     | 3.3V     |
+| GND     | GND      |
+| SDA     | 21       |
+| SCL     | 22       |
+
+### **Button Wiring**
+- Ensure each button is connected so that **ground and the pin are not connected unless the button is pressed**.
+
+| Button | ESP32 Pin |
+|--------|----------|
+| Button 1 | 12 |
+| Button 2 | 14 |
+| Button 3 | 27 |
+| Button 4 | 26 |
+
+![Button Wiring](https://github.com/user-attachments/assets/7a499785-861d-4e20-a064-888535d4156e)
+
+---
+
+## Notes
+- Ensure all connections are **secure** and **correct** before powering on the device.
+- Double-check that all required **libraries** are installed in Arduino IDE.
+- If you encounter issues, check the **Serial Monitor** for debugging information.
+
+---
 
 
-
-# How to set code up
-you will need the ardunio IDE, a esp-32, and the following libraries: Adafruit GFX library (1.11.11), Adafruit SSD1306 (2.5.13), SD (1.3.0), ezButton (1.0.6), IRMP (3.6.4)
-download ir-parsed-testing.ino and PinDefinitionsAndMore.h and put both in a Arduino IDE environment or add a new tab after opening the .ino and just copy and paste the code and name
-then plug in your esp-32 and upload the code!
-
-
-
-# Required parts
-1. esp32
-2. 4 pin 64x128 oled
-3. micro sd card to sd card adapter
-4. 4 buttons
-5. breadoard / solder-board and wires
-
-
- # how to wire
-sd cards pins to esp32 pins:
-1 to 5
-2 to 23
-3 to gnd
-4 to vcc(3.3v)
-5 to 18
-6 to gnd
-7 to 19
-![maxresdefault](https://github.com/user-attachments/assets/cc19777b-53b5-4adb-aee7-3fdfbca30b4f)
+Happy **ethical** hacking! 🚀
