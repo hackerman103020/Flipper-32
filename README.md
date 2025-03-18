@@ -78,12 +78,12 @@ To set up and upload the code to your ESP32, you will need:
 - Wire the VCC(+)  in the image to the pins, and the GND(-) to gnd
 - Ensure each button is connected so that **ground and the pin are not connected unless the button is pressed**.
 
-| Button | ESP32 GPIO Pin |
-|--------|----------|
-| Button 1 | 12 |
-| Button 2 | 14 |
-| Button 3 | 27 |
-| Button 4 | 26 |
+| Button | ESP32 GPIO Pin | Purpose |
+|--------|----------|-----| 
+| Button 1 | 12 |  Plus   |
+| Button 2 | 14 |  Minus  |
+| Button 3 | 27 |  Equal  |
+| Button 4 | 26 |  Back   |
 
 ![Button Wiring](https://github.com/user-attachments/assets/7a499785-861d-4e20-a064-888535d4156e)
 
