@@ -22,4 +22,12 @@ then plug in your esp-32 and upload the code!
 
 
  # how to wire
-(https://microchip.my.site.com/servlet/rtaImage?eid=ka13l000000lwLi&feoid=00N3l00000QDoF6&refid=0EM3l000005tGhA)
+sd cards pins to esp32 pins:
+1 to 5
+2 to 23
+3 to gnd
+4 to vcc(3.3v)
+5 to 18
+6 to gnd
+7 to 19
+![maxresdefault](https://github.com/user-attachments/assets/cc19777b-53b5-4adb-aee7-3fdfbca30b4f)
