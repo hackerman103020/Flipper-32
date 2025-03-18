@@ -54,7 +54,7 @@ To set up and upload the code to your ESP32, you will need:
 
 
 ### **SD Card to ESP32 Wiring**
-| SD Card Pin | ESP32 Pin |
+| SD Card Pin | ESP32 GPIO Pin |
 |------------|----------|
 | 1          | 5        |
 | 2          | 23       |
@@ -67,7 +67,7 @@ To set up and upload the code to your ESP32, you will need:
 ![SD Card Wiring](https://github.com/user-attachments/assets/cc19777b-53b5-4adb-aee7-3fdfbca30b4f)
 
 ### **OLED Screen to ESP32 Wiring**
-| OLED Pin | ESP32 Pin |
+| OLED Pin | ESP32 GPIO Pin |
 |---------|----------|
 | VCC     | 3.3V     |
 | GND     | GND      |
@@ -78,7 +78,7 @@ To set up and upload the code to your ESP32, you will need:
 - Wire the VCC(+)  in the image to the pins, and the GND(-) to gnd
 - Ensure each button is connected so that **ground and the pin are not connected unless the button is pressed**.
 
-| Button | ESP32 Pin |
+| Button | ESP32 GPIO Pin |
 |--------|----------|
 | Button 1 | 12 |
 | Button 2 | 14 |
