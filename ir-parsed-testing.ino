@@ -41,7 +41,7 @@ String fileList[1000];
 int fileCount = 0;
 int selectedIndex = 0;
 int topIndex = 0;
-const int maxDisplayLength = 20;
+const int maxDisplayLength = 17;
 const int maxVisibleItems = 5;
 bool isAtRoot = true;
 
@@ -243,6 +243,8 @@ void loop() {
       buttonBackReady = false;
       goBackToParent();
             selectedIndex = FileLoopBackIndex[currentDepth];
+            FileLoopBackIndex[currentDepth] = 0;
+
     }
     if(buttonBack.isReleased()){
       buttonBackReady = true;
@@ -384,6 +386,7 @@ void loop() {
       currentState = STATE_BROWSING;
       // Restore previous file list position
       selectedIndex = FileLoopBackIndex[currentDepth];
+      FileLoopBackIndex[currentDepth] = 0;
       displayFileList();
     }
     if(buttonBack.isReleased()){
@@ -461,7 +464,7 @@ void displayFileList() {
     
     String name = fileList[index];
     if(name.length() > maxDisplayLength)
-      name = name.substring(0, maxDisplayLength-3) + "~";
+      name = name.substring(0, maxDisplayLength) + "~";
       
     display.setCursor(2, i*12 + 2);
     display.print(name);
@@ -501,8 +504,19 @@ void displayCommandList() {
     display.print(typeChar + String(" ") + name);
     
     display.setCursor(SCREEN_WIDTH-24, i*12 + 2);
-    if(commands[index].protocol == "NEC") display.print("N");
-    else if(commands[index].protocol != "") display.print("P");
+    if(commands[index].protocol == "NEC") display.print("NEC");
+    else if(commands[index].protocol == "NECext") display.print("Nex");
+    else if(commands[index].protocol == "NEC42") display.print("N42");
+    else if(commands[index].protocol == "NEC42ext") display.print("42e");
+    else if(commands[index].protocol == "Samsung32") display.print("S32");
+    else if(commands[index].protocol == "RC5") display.print("RC5");
+    else if(commands[index].protocol == "RC5X") display.print("RCX");
+    else if(commands[index].protocol == "RC6") display.print("RC6");
+    else if(commands[index].protocol == "SIRC") display.print("SRC");
+    else if(commands[index].protocol == "SIRC15") display.print("S15");
+    else if(commands[index].protocol == "SIRC20") display.print("S20");
+    else if(commands[index].protocol == "Kaseikyo") display.print("K");
+    else if(commands[index].protocol != "") display.print("R");
   }
   display.display();
 }
