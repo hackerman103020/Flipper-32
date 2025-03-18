@@ -88,6 +88,10 @@ To set up and upload the code to your ESP32, you will need:
 ![Button Wiring](https://github.com/user-attachments/assets/7a499785-861d-4e20-a064-888535d4156e)
 
 ---
+# Final 
+  - I added a battery to mine, and connected the usb port of it to the esp 32 with a switch! 
+![Pic of thing](https://github.com/user-attachments/assets/a5d47e33-c7c8-4f8e-8083-07ea85bd02af)
+
 
 ## Notes
 - Ensure all connections are **secure** and **correct** before powering on the device.
